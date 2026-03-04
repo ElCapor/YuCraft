@@ -289,7 +289,10 @@ target_include_directories(minecraft-pe PRIVATE
     "${SRC}"
     "${SRC}/client"              # for #include "Minecraft.h" style includes
     "${RAKNET_SRC}"
-    "${CMAKE_SOURCE_DIR}/handheld/lib/include"   # png.h, zlib.h (vendored)
+    # NOTE: do NOT add handheld/lib/include here — it contains libpng 1.2.37
+    # headers that conflict with the system 1.6.x ABI (png_struct layout
+    # changed, corrupting row reads). System headers arrive via PNG::PNG and
+    # ZLIB::ZLIB imported targets in target_link_libraries below.
 )
 
 # ── Compile definitions ────────────────────────────────────────────────────
