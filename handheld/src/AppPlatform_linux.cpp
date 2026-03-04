@@ -1,6 +1,8 @@
 #include "AppPlatform_linux.h"
 #include "world/level/storage/FolderMethods.h"
 
+#include <SDL2/SDL.h>
+
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -92,6 +94,59 @@ TextureData AppPlatform_linux::loadTexture(const std::string& filename_,
     delete[] row_ptrs;
 
     return out;
+}
+
+// ── User-input dialog ─────────────────────────────────────────────────────
+
+void AppPlatform_linux::createUserInput() {
+    text_input_active_ = true;
+    text_input_status_ = -1;
+    text_input_buffer_.clear();
+    SDL_StartTextInput();
+    LOGI("[Input] Type a world name and press Enter (Esc to cancel): ");
+}
+
+int AppPlatform_linux::getUserInputStatus() {
+    return text_input_status_;
+}
+
+StringVector AppPlatform_linux::getUserInput() {
+    StringVector sv;
+    sv.push_back(text_input_buffer_);  // sv[0]=name; sv[1]=seed (omitted = random)
+    return sv;
+}
+
+void AppPlatform_linux::onTextInput(const char* text) {
+    if (!text_input_active_) return;
+    text_input_buffer_ += text;
+    LOGI("%s", text);  // echo typed character(s) to terminal
+}
+
+void AppPlatform_linux::onTextConfirm() {
+    if (!text_input_active_) return;
+    text_input_active_ = false;
+    text_input_status_ = 1;
+    SDL_StopTextInput();
+    LOGI("\n[Input] World name: '%s'\n", text_input_buffer_.c_str());
+}
+
+void AppPlatform_linux::onTextCancel() {
+    if (!text_input_active_) return;
+    text_input_active_ = false;
+    text_input_status_ = 0;
+    SDL_StopTextInput();
+    LOGI("\n[Input] Cancelled\n");
+}
+
+void AppPlatform_linux::onTextBackspace() {
+    if (!text_input_active_ || text_input_buffer_.empty()) return;
+    // Remove last UTF-8 codepoint (may be multi-byte)
+    text_input_buffer_.pop_back();
+    while (!text_input_buffer_.empty() &&
+           (static_cast<unsigned char>(text_input_buffer_.back()) & 0xC0u) == 0x80u) {
+        text_input_buffer_.pop_back();
+    }
+    LOGI("\r[Input] %s ", text_input_buffer_.c_str());
 }
 
 // ── readAssetFile ──────────────────────────────────────────────────────────

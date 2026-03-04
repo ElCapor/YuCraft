@@ -105,19 +105,41 @@ static void linux_handle_events(App* app) {
             break;
 
         case SDL_KEYDOWN: {
+            AppPlatform_linux* plat =
+                static_cast<AppPlatform_linux*>(app->platform());
+            if (plat->isInTextInputMode()) {
+                SDL_Keycode sym = event.key.keysym.sym;
+                if (sym == SDLK_RETURN || sym == SDLK_KP_ENTER)
+                    plat->onTextConfirm();
+                else if (sym == SDLK_ESCAPE)
+                    plat->onTextCancel();
+                else if (sym == SDLK_BACKSPACE)
+                    plat->onTextBackspace();
+                break;  // swallow all keys while typing world name
+            }
             unsigned char key = linux_transform_key(event.key.keysym.sym);
             if (key) Keyboard::feed(key, KeyboardAction::KEYDOWN);
             break;
         }
         case SDL_KEYUP: {
+            AppPlatform_linux* plat =
+                static_cast<AppPlatform_linux*>(app->platform());
+            if (plat->isInTextInputMode()) break;  // suppress while typing
             unsigned char key = linux_transform_key(event.key.keysym.sym);
             if (key) Keyboard::feed(key, KeyboardAction::KEYUP);
             break;
         }
-        case SDL_TEXTINPUT:
-            for (const char* c = event.text.text; *c != '\0'; ++c)
-                Keyboard::feedText(*c);
+        case SDL_TEXTINPUT: {
+            AppPlatform_linux* plat =
+                static_cast<AppPlatform_linux*>(app->platform());
+            if (plat->isInTextInputMode()) {
+                plat->onTextInput(event.text.text);
+            } else {
+                for (const char* c = event.text.text; *c != '\0'; ++c)
+                    Keyboard::feedText(*c);
+            }
             break;
+        }
 
         case SDL_MOUSEMOTION: {
             float x = static_cast<float>(event.motion.x);

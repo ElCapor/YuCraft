@@ -61,11 +61,29 @@ class AppPlatform_linux : public AppPlatform {
 
     bool  supportsTouchscreen() override        { return false; }
 
+    // ── User-input dialog (world name entry via SDL text input) ───────────
+    // Called by AppPlatform::createUserInput(int) → createUserInput().
+    void        createUserInput() override;
+    int         getUserInputStatus() override;
+    StringVector getUserInput() override;
+
+    // Called from linux_handle_events in main_linux.h:
+    bool isInTextInputMode() const { return text_input_active_; }
+    void onTextInput(const char* text);  // SDL_TEXTINPUT event
+    void onTextConfirm();                // Enter key
+    void onTextCancel();                 // Escape key
+    void onTextBackspace();              // Backspace key
+
  private:
     std::string asset_base_path_{"./data/"};
     std::string storage_path_;
     int screen_width_{1280};
     int screen_height_{720};
+
+    // Text input state
+    bool        text_input_active_{false};
+    int         text_input_status_{-1};  // -1=waiting, 0=cancelled, 1=confirmed
+    std::string text_input_buffer_;
 };
 
 #endif  // APPPLATFORM_LINUX_H__
