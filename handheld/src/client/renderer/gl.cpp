@@ -38,8 +38,11 @@ void __gluMakeIdentityf(GLfloat m[16]) {
 
 void glInit()
 {
+#ifndef LINUX
+	// On Linux, libepoxy auto-initialises on first GL call; no init needed.
 	GLenum err = glewInit();
 	printf("GLEW Init Error: %d\n", err);
+#endif
 }
 
 void anGenBuffers(GLsizei n, GLuint* buffers) {

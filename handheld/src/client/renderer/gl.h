@@ -7,9 +7,12 @@
 #ifdef WIN32
     #include <WinSock2.h>
     #include <Windows.h>
+    #include <gl/glew.h>
+    #include <gl/GL.h>
+#else
+    // Linux / POSIX — epoxy dispatches transparently through GLX (X11) or EGL (Wayland).
+    #include <epoxy/gl.h>
 #endif
-#include <gl/glew.h>
-#include <gl/GL.h>
 
 #define glFogx(a,b)	glFogi(a,b)
 #define glOrthof(a,b,c,d,e,f) glOrtho(a,b,c,d,e,f)

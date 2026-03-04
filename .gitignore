@@ -35,3 +35,7 @@
 /Release
 *.db
 *.opendb
+
+
+build/
+CmakeFiles/

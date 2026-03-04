@@ -24,12 +24,17 @@
     #endif
 #else
     // Uglyness to fix redeclaration issues
+    #define USE_VBO
     #ifdef WIN32
 	   #include <WinSock2.h>
 	   #include <Windows.h>
-	#endif
-	#include <gl/glew.h>
-	#include <gl/GL.h>
+	   #include <gl/glew.h>
+	   #include <gl/GL.h>
+    #else
+       // Linux / POSIX — epoxy dispatches transparently through GLX (X11) or EGL
+       // (Wayland) based on the current context; no glewInit() required.
+       #include <epoxy/gl.h>
+    #endif
 
 	#define glFogx(a,b)	glFogi(a,b)
 	#define glOrthof(a,b,c,d,e,f) glOrtho(a,b,c,d,e,f)

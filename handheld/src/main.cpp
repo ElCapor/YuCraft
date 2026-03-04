@@ -37,4 +37,8 @@
     #include "main_rpi.h"
 #endif
 
+#ifdef LINUX
+    #include "main_linux.h"
+#endif
+
 
