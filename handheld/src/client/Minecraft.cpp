@@ -288,7 +288,10 @@ void Minecraft::setLevel(Level* level, const std::string& message /* ="" */, Loc
 		}
 		this->level = level;
 		_hasSignaledGeneratingLevelFinished = false;
-#ifdef STANDALONE_SERVER
+#if defined(STANDALONE_SERVER) || defined(__EMSCRIPTEN__)
+		// WASM: pthreads are not available without -sPTHREAD support.
+		// Generate the level synchronously on the main thread instead.
+		// The browser will be unresponsive briefly (~1s) but it works.
 		const bool threadedLevelCreation = false;
 #else
 		const bool threadedLevelCreation = true;
