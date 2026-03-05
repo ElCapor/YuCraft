@@ -30,6 +30,7 @@ end
 
 -- Dependencies (Linux: system package manager / pkg-config)
 -- Windows uses vendored libs in handheld/lib/ — no add_requires() needed.
+-- WASM uses Emscripten built-in ports via -s USE_SDL=2 etc. — no add_requires() needed.
 if is_plat("linux") then
     add_requires("libsdl2",          {system = true})
     add_requires("openal-soft",      {system = true})
@@ -42,13 +43,13 @@ end
 -- ============================================================
 -- Target 1: raknet (static library)
 -- Sources differ per platform:
---   Linux   → handheld/project/lib_projects/raknet/jni/RaknetSources/
---   Windows → handheld/src/raknet/ (embedded alongside game source)
+--   Linux/WASM → handheld/project/lib_projects/raknet/jni/RaknetSources/
+--   Windows    → handheld/src/raknet/ (embedded alongside game source)
 -- ============================================================
 target("raknet")
     set_kind("static")
 
-    if is_plat("linux") then
+    if is_plat("linux") or is_plat("wasm") then
         add_files("handheld/project/lib_projects/raknet/jni/RaknetSources/*.cpp")
         add_includedirs(
             "handheld/project/lib_projects/raknet/jni/RaknetSources"
@@ -121,6 +122,43 @@ target("minecraft-pe")
         add_defines("WIN32", "_CRT_SECURE_NO_WARNINGS", "_CONSOLE")
         -- /W3 = warning level 3, /MP = multiprocessor compile, /EHsc = C++ exceptions
         add_cxflags("/W3", "/MP", "/EHsc")
+
+    -- --------------------------------------------------------
+    -- WASM-specific configuration (Emscripten)
+    -- xmake invocation:
+    --   xmake f -p wasm -m release
+    --   xmake build
+    -- Emscripten provides SDL2, libpng, zlib, and OpenAL as built-in
+    -- ports; all dependencies are expressed as -s USE_xxx=1 flags.
+    -- LEGACY_GL_EMULATION translates GLES 1.x fixed-function calls
+    -- (glBegin/glEnd, glMatrixMode, etc.) to WebGL 1 shaders at runtime,
+    -- which is the correct mode for a game originally targeting GLES 1.x.
+    -- --------------------------------------------------------
+    elseif is_plat("wasm") then
+        add_includedirs("handheld/project/lib_projects/raknet/jni/RaknetSources")
+        add_defines("WASM", "OPENGL_ES", "USE_VBO", "POSIX", "_LINUX", "NO_EGL")
+        -- Port flags must be passed to both compiler (for includes) and linker.
+        local em_ports = {"-s USE_SDL=2", "-s USE_LIBPNG=1", "-s USE_ZLIB=1"}
+        add_cxflags(
+            table.unpack(em_ports),
+            "-Wall",
+            "-Wno-unused-parameter",
+            "-Wno-sign-compare",
+            "-Wno-deprecated-declarations",
+            "-Wno-missing-field-initializers",
+            "-Wno-narrowing",
+            "-Wno-reorder"
+        )
+        add_ldflags(
+            table.unpack(em_ports),
+            "-s LEGACY_GL_EMULATION=1",     -- GLES 1.x fixed-function on WebGL 1
+            "-s GL_UNSAFE_OPTS=0",           -- required for correct GL emulation
+            "-s ALLOW_MEMORY_GROWTH=1",      -- heap grows as needed
+            "-s INITIAL_MEMORY=134217728",   -- 128 MB initial heap
+            "--preload-file handheld/data@/data"  -- embed data/ in virtual FS at /data/
+        )
+        -- Link Emscripten's Web Audio-backed OpenAL
+        add_links("openal")
     end
 
     -- --------------------------------------------------------
@@ -132,6 +170,12 @@ target("minecraft-pe")
             "handheld/src/AppPlatform_linux.cpp",
             "handheld/src/client/renderer/gl.cpp",  -- epoxy-based GL wrapper
             "handheld/src/server/CreatorLevel.cpp"  -- not present in Win32 vcxproj
+        )
+    elseif is_plat("wasm") then
+        add_files(
+            "handheld/src/AppPlatform_wasm.cpp",
+            "handheld/src/client/renderer/gles.cpp", -- GLES 1.x path → WebGL 1
+            "handheld/src/server/CreatorLevel.cpp"
         )
     elseif is_plat("windows") then
         add_files(
@@ -425,9 +469,15 @@ target("minecraft-pe")
     -- --------------------------------------------------------
     -- Post-build: copy data assets next to the binary
     -- The game expects to find ./data/ relative to its working directory.
+    -- WASM: skipped — assets are embedded in the .data file via
+    -- --preload-file at link time and accessed from the virtual FS at /data/.
     -- --------------------------------------------------------
     after_build(function(target)
         import("core.project.config")
+        if is_plat("wasm") then
+            print("WASM build: data assets already embedded via --preload-file, skipping copy.")
+            return
+        end
         local bindir = path.directory(target:targetfile())
         local src    = path.join(os.projectdir(), "handheld", "data")
         local dst    = path.join(bindir, "data")

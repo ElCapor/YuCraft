@@ -1,6 +1,476 @@
 [
 {
   "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/BitStream.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/BitStream.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/BitStream.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetSlidingWindow.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetSlidingWindow.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetSlidingWindow.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetUDT.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetUDT.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetUDT.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CheckSum.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CheckSum.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CheckSum.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CloudClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudClient.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudClient.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CloudCommon.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudCommon.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudCommon.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CloudServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudServer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudServer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CommandParserInterface.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CommandParserInterface.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CommandParserInterface.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ConnectionGraph2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ConnectionGraph2.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ConnectionGraph2.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ConsoleServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ConsoleServer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ConsoleServer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_BytePool.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_BytePool.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_BytePool.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_ByteQueue.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_ByteQueue.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_ByteQueue.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_HuffmanEncodingTree.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_HuffmanEncodingTree.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_HuffmanEncodingTree.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_Table.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_Table.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_Table.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DataCompressor.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DataCompressor.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DataCompressor.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DirectoryDeltaTransfer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DirectoryDeltaTransfer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DirectoryDeltaTransfer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DynDNS.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DynDNS.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DynDNS.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/EmailSender.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/EmailSender.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/EmailSender.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/EncodeClassName.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/EncodeClassName.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/EncodeClassName.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/EpochTimeToString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/EpochTimeToString.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/EpochTimeToString.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FileList.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FileList.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FileList.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FileListTransfer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FileListTransfer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FileListTransfer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FileOperations.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FileOperations.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FileOperations.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FormatString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FormatString.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FormatString.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FullyConnectedMesh2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FullyConnectedMesh2.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FullyConnectedMesh2.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/GetTime.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/GetTime.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/GetTime.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Getche.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Getche.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Getche.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Gets.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Gets.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Gets.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/GridSectorizer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/GridSectorizer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/GridSectorizer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/HTTPConnection.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/HTTPConnection.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/HTTPConnection.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/IncrementalReadInterface.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/IncrementalReadInterface.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/IncrementalReadInterface.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Itoa.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Itoa.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Itoa.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/LinuxStrings.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/LinuxStrings.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/LinuxStrings.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/LocklessTypes.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/LocklessTypes.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/LocklessTypes.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/LogCommandParser.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/LogCommandParser.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/LogCommandParser.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/MessageFilter.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/MessageFilter.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/MessageFilter.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughClient.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughClient.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughServer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughServer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionClient.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionClient.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionCommon.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionCommon.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionCommon.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionServer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionServer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDManager.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDManager.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDManager.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDObject.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDObject.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDObject.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketConsoleLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketConsoleLogger.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketConsoleLogger.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketFileLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketFileLogger.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketFileLogger.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketLogger.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketLogger.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketOutputWindowLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketOutputWindowLogger.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketOutputWindowLogger.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketizedTCP.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketizedTCP.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketizedTCP.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PluginInterface2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PluginInterface2.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PluginInterface2.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RPC4Plugin.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RPC4Plugin.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RPC4Plugin.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Rackspace.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Rackspace.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Rackspace.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakMemoryOverride.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakMemoryOverride.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakMemoryOverride.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetCommandParser.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetCommandParser.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetCommandParser.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetSocket.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetSocket.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetSocket.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetStatistics.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetStatistics.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetStatistics.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTransport2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTransport2.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTransport2.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTypes.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTypes.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTypes.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakPeer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakPeer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakPeer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakSleep.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakSleep.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakSleep.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakString.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakString.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakThread.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakThread.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakThread.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakWString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakWString.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakWString.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Rand.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Rand.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Rand.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ReadyEvent.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ReadyEvent.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ReadyEvent.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ReliabilityLayer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ReliabilityLayer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ReliabilityLayer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ReplicaManager3.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ReplicaManager3.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ReplicaManager3.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Router2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Router2.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Router2.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SHA1.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SHA1.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SHA1.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SecureHandshake.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SecureHandshake.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SecureHandshake.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SendToThread.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SendToThread.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SendToThread.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SignaledEvent.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SignaledEvent.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SignaledEvent.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SimpleMutex.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SimpleMutex.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SimpleMutex.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SocketLayer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SocketLayer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SocketLayer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/StringCompressor.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/StringCompressor.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/StringCompressor.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/StringTable.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/StringTable.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/StringTable.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SuperFastHash.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SuperFastHash.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SuperFastHash.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TCPInterface.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TCPInterface.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TCPInterface.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TableSerializer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TableSerializer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TableSerializer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TeamBalancer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TeamBalancer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TeamBalancer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TelnetTransport.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TelnetTransport.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TelnetTransport.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ThreadsafePacketLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ThreadsafePacketLogger.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ThreadsafePacketLogger.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TwoWayAuthentication.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TwoWayAuthentication.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TwoWayAuthentication.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPForwarder.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPForwarder.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPForwarder.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyClient.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyClient.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyCoordinator.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyCoordinator.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyCoordinator.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyServer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyServer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VariableDeltaSerializer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableDeltaSerializer.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableDeltaSerializer.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VariableListDeltaTracker.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableListDeltaTracker.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableListDeltaTracker.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VariadicSQLParser.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VariadicSQLParser.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VariadicSQLParser.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VitaIncludes.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VitaIncludes.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VitaIncludes.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/WSAStartupSingleton.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/WSAStartupSingleton.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/WSAStartupSingleton.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/_FindFirst.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/_FindFirst.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/_FindFirst.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/gettimeofday.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/gettimeofday.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/gettimeofday.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/rdlmalloc.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/rdlmalloc.cpp"],
+  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/rdlmalloc.cpp"
+},
+{
+  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
   "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/src", "-Ihandheld/src/client", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-DLINUX", "-DNO_EGL", "-DUSE_VBO", "-DPOSIX", "-D_LINUX", "-D_GNU_SOURCE=1", "-D_REENTRANT", "-isystem", "/usr/include/SDL2", "-isystem", "/usr/include/AL", "-isystem", "/usr/include/libpng16", "-Wall", "-Wextra", "-Wpedantic", "-Wno-unused-parameter", "-Wno-sign-compare", "-Wno-deprecated-declarations", "-Wno-missing-field-initializers", "-fPIC", "-Wno-narrowing", "-Wno-reorder", "-fvisibility=hidden", "-DNDEBUG", "-o", "build/.objs/minecraft-pe/linux/x86_64/release/handheld/src/AppPlatform_linux.cpp.o", "handheld/src/AppPlatform_linux.cpp"],
   "file": "handheld/src/AppPlatform_linux.cpp"
 },
@@ -1218,474 +1688,4 @@
   "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
   "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/src", "-Ihandheld/src/client", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-DLINUX", "-DNO_EGL", "-DUSE_VBO", "-DPOSIX", "-D_LINUX", "-D_GNU_SOURCE=1", "-D_REENTRANT", "-isystem", "/usr/include/SDL2", "-isystem", "/usr/include/AL", "-isystem", "/usr/include/libpng16", "-Wall", "-Wextra", "-Wpedantic", "-Wno-unused-parameter", "-Wno-sign-compare", "-Wno-deprecated-declarations", "-Wno-missing-field-initializers", "-fPIC", "-Wno-narrowing", "-Wno-reorder", "-fvisibility=hidden", "-DNDEBUG", "-o", "build/.objs/minecraft-pe/linux/x86_64/release/handheld/src/world/phys/HitResult.cpp.o", "handheld/src/world/phys/HitResult.cpp"],
   "file": "handheld/src/world/phys/HitResult.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/BitStream.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/BitStream.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/BitStream.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetSlidingWindow.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetSlidingWindow.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetSlidingWindow.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetUDT.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetUDT.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CCRakNetUDT.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CheckSum.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CheckSum.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CheckSum.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CloudClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudClient.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudClient.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CloudCommon.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudCommon.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudCommon.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CloudServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudServer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CloudServer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/CommandParserInterface.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/CommandParserInterface.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/CommandParserInterface.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ConnectionGraph2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ConnectionGraph2.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ConnectionGraph2.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ConsoleServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ConsoleServer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ConsoleServer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_BytePool.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_BytePool.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_BytePool.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_ByteQueue.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_ByteQueue.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_ByteQueue.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_HuffmanEncodingTree.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_HuffmanEncodingTree.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_HuffmanEncodingTree.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DS_Table.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_Table.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DS_Table.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DataCompressor.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DataCompressor.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DataCompressor.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DirectoryDeltaTransfer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DirectoryDeltaTransfer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DirectoryDeltaTransfer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/DynDNS.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/DynDNS.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/DynDNS.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/EmailSender.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/EmailSender.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/EmailSender.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/EncodeClassName.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/EncodeClassName.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/EncodeClassName.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/EpochTimeToString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/EpochTimeToString.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/EpochTimeToString.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FileList.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FileList.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FileList.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FileListTransfer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FileListTransfer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FileListTransfer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FileOperations.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FileOperations.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FileOperations.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FormatString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FormatString.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FormatString.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/FullyConnectedMesh2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/FullyConnectedMesh2.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/FullyConnectedMesh2.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/GetTime.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/GetTime.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/GetTime.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Getche.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Getche.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Getche.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Gets.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Gets.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Gets.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/GridSectorizer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/GridSectorizer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/GridSectorizer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/HTTPConnection.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/HTTPConnection.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/HTTPConnection.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/IncrementalReadInterface.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/IncrementalReadInterface.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/IncrementalReadInterface.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Itoa.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Itoa.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Itoa.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/LinuxStrings.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/LinuxStrings.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/LinuxStrings.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/LocklessTypes.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/LocklessTypes.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/LocklessTypes.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/LogCommandParser.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/LogCommandParser.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/LogCommandParser.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/MessageFilter.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/MessageFilter.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/MessageFilter.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughClient.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughClient.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughServer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatPunchthroughServer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionClient.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionClient.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionCommon.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionCommon.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionCommon.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionServer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NatTypeDetectionServer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDManager.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDManager.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDManager.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDObject.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDObject.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/NetworkIDObject.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketConsoleLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketConsoleLogger.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketConsoleLogger.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketFileLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketFileLogger.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketFileLogger.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketLogger.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketLogger.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketOutputWindowLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketOutputWindowLogger.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketOutputWindowLogger.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PacketizedTCP.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketizedTCP.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PacketizedTCP.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/PluginInterface2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/PluginInterface2.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/PluginInterface2.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RPC4Plugin.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RPC4Plugin.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RPC4Plugin.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Rackspace.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Rackspace.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Rackspace.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakMemoryOverride.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakMemoryOverride.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakMemoryOverride.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetCommandParser.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetCommandParser.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetCommandParser.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetSocket.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetSocket.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetSocket.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetStatistics.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetStatistics.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetStatistics.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTransport2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTransport2.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTransport2.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTypes.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTypes.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakNetTypes.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakPeer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakPeer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakPeer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakSleep.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakSleep.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakSleep.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakString.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakString.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakThread.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakThread.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakThread.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/RakWString.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/RakWString.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/RakWString.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Rand.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Rand.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Rand.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ReadyEvent.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ReadyEvent.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ReadyEvent.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ReliabilityLayer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ReliabilityLayer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ReliabilityLayer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ReplicaManager3.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ReplicaManager3.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ReplicaManager3.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/Router2.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/Router2.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/Router2.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SHA1.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SHA1.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SHA1.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SecureHandshake.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SecureHandshake.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SecureHandshake.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SendToThread.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SendToThread.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SendToThread.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SignaledEvent.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SignaledEvent.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SignaledEvent.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SimpleMutex.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SimpleMutex.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SimpleMutex.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SocketLayer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SocketLayer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SocketLayer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/StringCompressor.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/StringCompressor.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/StringCompressor.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/StringTable.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/StringTable.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/StringTable.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/SuperFastHash.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/SuperFastHash.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/SuperFastHash.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TCPInterface.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TCPInterface.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TCPInterface.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TableSerializer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TableSerializer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TableSerializer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TeamBalancer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TeamBalancer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TeamBalancer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TelnetTransport.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TelnetTransport.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TelnetTransport.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/ThreadsafePacketLogger.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/ThreadsafePacketLogger.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/ThreadsafePacketLogger.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/TwoWayAuthentication.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/TwoWayAuthentication.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/TwoWayAuthentication.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPForwarder.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPForwarder.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPForwarder.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyClient.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyClient.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyClient.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyCoordinator.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyCoordinator.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyCoordinator.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyServer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyServer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/UDPProxyServer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VariableDeltaSerializer.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableDeltaSerializer.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableDeltaSerializer.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VariableListDeltaTracker.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableListDeltaTracker.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VariableListDeltaTracker.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VariadicSQLParser.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VariadicSQLParser.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VariadicSQLParser.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/VitaIncludes.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/VitaIncludes.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/VitaIncludes.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/WSAStartupSingleton.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/WSAStartupSingleton.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/WSAStartupSingleton.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/_FindFirst.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/_FindFirst.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/_FindFirst.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/gettimeofday.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/gettimeofday.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/gettimeofday.cpp"
-},
-{
-  "directory": "/home/slop/Minecraft-MCPE-Alpha-0.6.1",
-  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O2", "-std=c++17", "-Ihandheld/project/lib_projects/raknet/jni/RaknetSources", "-D_LINUX", "-DLINUX", "-w", "-fpermissive", "-DNDEBUG", "-o", "build/.objs/raknet/linux/x86_64/release/handheld/project/lib_projects/raknet/jni/RaknetSources/rdlmalloc.cpp.o", "handheld/project/lib_projects/raknet/jni/RaknetSources/rdlmalloc.cpp"],
-  "file": "handheld/project/lib_projects/raknet/jni/RaknetSources/rdlmalloc.cpp"
 }]

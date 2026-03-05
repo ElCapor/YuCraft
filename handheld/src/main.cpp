@@ -41,4 +41,7 @@
     #include "main_linux.h"
 #endif
 
+#ifdef WASM
+    #include "main_wasm.h"
+#endif
 

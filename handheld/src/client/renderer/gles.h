@@ -4,8 +4,8 @@
 #include "../../platform/log.h"
 #include "../Options.h"
 
-// Android should always run OPENGL_ES
-#if defined(ANDROID) || defined(__APPLE__) || defined(RPI)
+// Android, Apple, Raspberry Pi, and Emscripten (WebGL) all use the GLES path.
+#if defined(ANDROID) || defined(__APPLE__) || defined(RPI) || defined(__EMSCRIPTEN__)
     #define OPENGL_ES
 #endif
 
