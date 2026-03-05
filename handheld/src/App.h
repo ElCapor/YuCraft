@@ -1,21 +1,23 @@
 #ifndef APP_H__
 #define APP_H__
 
-#ifdef __APPLE__
-#define NO_EGL
+// EGL is only available on Android and (optionally) iOS.
+// Linux, WASM, Win32, and RPI handle buffer swapping at the AppPlatform layer.
+#if defined(ANDROID)
+#define APP_USE_EGL
 #endif
 #ifdef STANDALONE_SERVER
-#define NO_EGL
+#undef APP_USE_EGL
 #endif
 
 #include "AppPlatform.h"
-#ifndef NO_EGL 
+#ifdef APP_USE_EGL
     #include <EGL/egl.h>
 #endif
 #include "platform/log.h"
 
 typedef struct AppContext {
-#ifndef NO_EGL
+#ifdef APP_USE_EGL
 	EGLDisplay display;
 	EGLContext context;
 	EGLSurface surface;
@@ -59,16 +61,18 @@ public:
     virtual bool saveState(void** state, int* stateSize) { return false; }
     
 	void swapBuffers() {
-#ifndef NO_EGL
+#ifdef APP_USE_EGL
 		if (_context.doRender) {
-#ifdef OPENGL_GLES
 			eglSwapBuffers(_context.display, _context.surface);
-#else
-			// For desktop OpenGL, use SwapBuffers with HDC
-			SwapBuffers((HDC)_context.display);
-#endif
+		}
+#elif defined(WIN32)
+		if (_context.doRender) {
+			// Win32 WGL path — display holds the HDC
+			::SwapBuffers(reinterpret_cast<HDC>(_context.display));
 		}
 #endif
+		// Linux / WASM / RPI / iOS: buffer swap is owned by AppPlatform
+		// (e.g. SDL_GL_SwapWindow), not by App directly.
 	}
 
 	virtual void draw() {}

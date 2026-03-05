@@ -298,7 +298,6 @@ target_include_directories(minecraft-pe PRIVATE
 # ── Compile definitions ────────────────────────────────────────────────────
 target_compile_definitions(minecraft-pe PRIVATE
     LINUX               # triggers #include "main_linux.h" in main.cpp
-    NO_EGL              # SDL2 owns the GL context; App::swapBuffers() is no-op
     USE_VBO             # enable VBO rendering path in gl.cpp / gles.h
     POSIX               # generic POSIX flag used in platform/*.cpp
     _LINUX              # used by some RakNet headers

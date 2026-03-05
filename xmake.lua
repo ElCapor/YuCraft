@@ -87,7 +87,7 @@ target("minecraft-pe")
         --       headers that clash with the system libpng 1.6.x ABI.
         add_packages("libsdl2", "openal-soft", "libpng", "zlib", "pkgconfig::epoxy")
         add_syslinks("GL", "dl", "pthread")
-        add_defines("LINUX", "NO_EGL", "USE_VBO", "POSIX", "_LINUX")
+        add_defines("LINUX", "USE_VBO", "POSIX", "_LINUX")
         add_cxflags(
             "-Wall", "-Wextra", "-Wpedantic",
             "-Wno-unused-parameter",
@@ -136,7 +136,7 @@ target("minecraft-pe")
     -- --------------------------------------------------------
     elseif is_plat("wasm") then
         add_includedirs("handheld/project/lib_projects/raknet/jni/RaknetSources")
-        add_defines("WASM", "OPENGL_ES", "USE_VBO", "POSIX", "_LINUX", "NO_EGL")
+        add_defines("WASM", "OPENGL_ES", "USE_VBO", "POSIX", "_LINUX")
         -- Port flags must be passed to both compiler (for includes) and linker.
         local em_ports = {"-s USE_SDL=2", "-s USE_LIBPNG=1", "-s USE_ZLIB=1"}
         add_cxflags(

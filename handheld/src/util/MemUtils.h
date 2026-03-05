@@ -1,19 +1,19 @@
 #ifndef MEMUTILS_H__
 #define MEMUTILS_H__
 
+#include <cstdint>
+
 template <class T>
 class Ref {
 public:
-	//~Ref() { //@todo: add this if the pointer is created externally
-	//	dec();
-	//}
+	~Ref() { dec(); }
 	void inc() { ++_count; }
 	void dec() { if (--_count == 0 && _obj) delete _obj; }
 
-	__inline short refCount() { return _count; }
-	__inline bool isUnique()  { return _count == 1; }
+	inline int32_t refCount() { return _count; }
+	inline bool isUnique()  { return _count == 1; }
 
-	__inline T* obj() { return _obj; }
+	inline T* obj() { return _obj; }
 
 	T& operator->() { return *_obj; }
 	void operator++() { inc(); }
@@ -29,7 +29,7 @@ private:
 	Ref& operator=(const Ref& rhs);
 
 	T* _obj;
-	short _count;
+	int32_t _count;
 };
 
 #endif /*MEMUTILS_H__*/

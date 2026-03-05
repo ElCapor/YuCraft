@@ -31,7 +31,7 @@ public:
 	virtual ~Mob();
 
 	void _init();
-	virtual void reset();
+	virtual void reset() override;
 
 	virtual void knockback(Entity* source, int dmg, float xd, float zd);
 	virtual void die(Entity* source);
@@ -43,10 +43,10 @@ public:
 	virtual void spawnAnim();
     virtual std::string getTexture();
 
-	virtual bool isAlive();
-    virtual bool isPickable();
-    virtual bool isPushable();
-	virtual bool isShootable();
+	virtual bool isAlive() override;
+    virtual bool isPickable() override;
+    virtual bool isPushable() override;
+	virtual bool isShootable() override;
 
 	MoveControl* getMoveControl();
 	JumpControl* getJumpControl();
@@ -54,10 +54,10 @@ public:
 	virtual bool isSleeping();
 	virtual bool isWaterMob();
 
-    virtual bool isSneaking();
+    virtual bool isSneaking() override;
     virtual void setSneaking(bool value);
 
-    virtual float getHeadHeight();
+    virtual float getHeadHeight() override;
 
 	virtual float getVoicePitch();
 
@@ -66,22 +66,22 @@ public:
 	virtual int getItemInHandIcon(ItemInstance* item, int layer) {
 		return item->getIcon();	
 	}
-    virtual void lerpTo(float x, float y, float z, float yRot, float xRot, int steps);
+    virtual void lerpTo(float x, float y, float z, float yRot, float xRot, int steps) override;
 
 	void	setYya( float yya );
 	float	getSpeed();
 	void	setSpeed(float speed);
 	void	setJumping(bool jump);
 
-	virtual void tick();
-	virtual void baseTick();
+	virtual void tick() override;
+	virtual void baseTick() override;
     virtual void superTick();
 
     virtual void heal(int heal);
     virtual int  getMaxHealth() { return 10; }
-	virtual bool hurt(Entity* source, int dmg);
+	virtual bool hurt(Entity* source, int dmg) override;
     virtual void actuallyHurt(int dmg);
-    virtual void animateHurt();
+    virtual void animateHurt() override;
     virtual int getArmorValue();
 
 	virtual HitResult pick(float range, float a);
@@ -91,11 +91,11 @@ public:
 
 	virtual void aiStep();
 
-	virtual SynchedEntityData* getEntityData();
-	virtual const SynchedEntityData* getEntityData() const;
+	virtual SynchedEntityData* getEntityData() override;
+	virtual const SynchedEntityData* getEntityData() const override;
 
-	virtual void addAdditonalSaveData(CompoundTag* entityTag);
-	virtual void readAdditionalSaveData(CompoundTag* tag);
+	virtual void addAdditonalSaveData(CompoundTag* entityTag) override;
+	virtual void readAdditionalSaveData(CompoundTag* tag) override;
 
 	virtual void lookAt(Entity* e, float yMax, float xMax);
 	virtual bool isLookingAtAnEntity();
@@ -113,17 +113,17 @@ public:
 
 	virtual int getMaxSpawnClusterSize();
 
-	virtual bool isMob() { return true; }
+	virtual bool isMob() override { return true; }
 	virtual bool isBaby() { return false; }
 
-	virtual void handleEntityEvent(char id);
+	virtual void handleEntityEvent(char id) override;
 	virtual ItemInstance* getCarriedItem() {return NULL;}
 	virtual int getUseItemDuration() {return 0;}
 	virtual void swing();
 protected:
-	virtual void causeFallDamage(float distance);
+	virtual void causeFallDamage(float distance) override;
 
-	virtual void outOfWorld();
+	virtual void outOfWorld() override;
 	virtual bool removeWhenFarAway();
 
 	virtual int getDeathLoot();
@@ -136,7 +136,7 @@ protected:
     virtual void updateAi();
 	virtual void newServerAiStep();
 	
-	virtual void setSize(float w, float h);
+	virtual void setSize(float w, float h) override;
 
 	virtual int getMaxHeadXRot();
 

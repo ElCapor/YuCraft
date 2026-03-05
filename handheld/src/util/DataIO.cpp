@@ -16,14 +16,11 @@ void BytesDataOutput::writeString( const std::string& v )
 // BytesDataInput
 //
 std::string BytesDataInput::readString() {
-	int len = readShort();
-	if (len > MAX_STRING_LENGTH - 1)
-		len = MAX_STRING_LENGTH - 1;
-	char* buffer = new char[len + 1];
-	readBytes(buffer, len);
-	buffer[len] = 0;
-
-	std::string out(buffer);
-	delete[] buffer;
+	const int len = readShort();
+	// readShort() returns a signed short, so len is in [-32768, 32767].
+	// A negative length is malformed data; zero is a valid empty string.
+	if (len <= 0) return "";
+	std::string out(static_cast<size_t>(len), '\0');
+	readBytes(&out[0], len);
 	return out;
 }

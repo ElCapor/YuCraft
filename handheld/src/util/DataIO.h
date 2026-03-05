@@ -115,10 +115,6 @@ public:
 		return o;
 	}
 	virtual void readBytes(void* data, int bytes) = 0;
-
-private:
-	static const int MAX_STRING_LENGTH = SHRT_MAX;
-	static char _charBuffer[MAX_STRING_LENGTH];
 };
 
 //class MemoryDataInput: public BytesDataInput {

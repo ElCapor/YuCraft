@@ -329,7 +329,6 @@ target_compile_definitions(minecraft-pe PRIVATE
     USE_VBO         # enable VBO rendering path in gles.cpp
     POSIX           # generic POSIX flag used in platform/*.cpp
     _LINUX          # reuse POSIX storage paths in platform/*.cpp
-    NO_EGL          # disable EGL/WGL swapBuffers in App.h; WASM uses SDL_GL_SwapWindow
 )
 
 # ── Emscripten port flags ───────────────────────────────────────────────────

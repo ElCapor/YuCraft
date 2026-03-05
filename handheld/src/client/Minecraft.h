@@ -1,6 +1,8 @@
 #ifndef NET_MINECRAFT_CLIENT__Minecraft_H__
 #define NET_MINECRAFT_CLIENT__Minecraft_H__
 
+#include <atomic>
+
 #include "Options.h"
 #ifndef STANDALONE_SERVER
 #include "MouseHandler.h"
@@ -71,7 +73,7 @@ public:
 	void setScreen(Screen*);
 
 	virtual void selectLevel(const std::string& levelId, const std::string& levelName, const LevelSettings& settings);
-	virtual void setLevel(Level* level, const std::string& message = "", LocalPlayer* forceInsertPlayer = NULL);
+	virtual void setLevel(Level* level, const std::string& message = "", LocalPlayer* forceInsertPlayer = nullptr);
 
 	void generateLevel( const std::string& message, Level* level );
 	LevelStorageSource* getLevelSource();
@@ -149,7 +151,8 @@ public:
 	static bool useAmbientOcclusion;
 	//static bool threadInterrupt;
 
-	volatile bool pause;
+	// std::atomic provides correct memory ordering across threads (volatile does not).
+	std::atomic<bool> pause;
 
 	LevelRenderer*  levelRenderer;
 	GameRenderer*   gameRenderer;
@@ -193,7 +196,7 @@ public:
     PixelCalc pixelCalcUi;
 
 	HitResult hitResult;
-	volatile int progressStagePercentage;
+	std::atomic<int> progressStagePercentage;
 
 	// This field is initialized in main()
 	// It sets the base path to where worlds can be written (sdcard on android)
@@ -201,8 +204,8 @@ public:
 	std::string externalCacheStoragePath;
 protected:
 	Timer timer;
-    // @note @attn @warn: this is dangerous as fuck!
-	volatile bool isGeneratingLevel;
+    // Atomic: written by generation thread, read by main thread.
+	std::atomic<bool> isGeneratingLevel;
 	bool _hasSignaledGeneratingLevelFinished;
 
 	LevelStorageSource* storageSource;
@@ -210,7 +213,7 @@ protected:
 	bool _powerVr;
 
 private:
-	volatile int progressStageStatusId;
+	std::atomic<int> progressStageStatusId;
 	static const char* progressMessages[];
 
 	int missTime;
