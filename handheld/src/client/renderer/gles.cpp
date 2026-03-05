@@ -47,9 +47,7 @@ void glInit()
 }
 
 void anGenBuffers(GLsizei n, GLuint* buffers) {
-	static GLuint k = 1;
-	for (int i = 0; i < n; ++i)
-		buffers[i] = ++k;
+	glGenBuffers(n, buffers);
 }
 
 #ifdef USE_VBO
