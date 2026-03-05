@@ -1,9 +1,9 @@
 # Minecraft PE Alpha 0.6.1 — Comprehensive Code Review
 
-**Date:** 2026-03-04  
+**Date:** 2026-03-05  
 **Reviewer:** GitHub Copilot (Claude Sonnet 4.6)  
 **Standard:** Google C++ Style Guide / C++23 Target  
-**Scope:** Full codebase audit of `handheld/src/`  
+**Scope:** Full codebase audit of `handheld/src/`; updated with findings from Linux, WASM porting work  
 
 ---
 
@@ -13,9 +13,10 @@
 2. [Critical Findings (🔴 MUST FIX)](#2-critical-findings-)
 3. [High Priority (🟡 SHOULD FIX)](#3-high-priority-)
 4. [Medium Priority (🟢 CONSIDER)](#4-medium-priority-)
-5. [Architecture Modernization](#5-architecture-modernization)
-6. [Performance Observations](#6-performance-observations)
-7. [Migration Priority Matrix](#7-migration-priority-matrix)
+5. [Platform Portability Bottlenecks](#5-platform-portability-bottlenecks)
+6. [Architecture Modernization](#6-architecture-modernization)
+7. [Performance Observations](#7-performance-observations)
+8. [Migration Priority Matrix](#8-migration-priority-matrix)
 
 ---
 
@@ -464,9 +465,325 @@ Use `std::string` with explicit bounds checking on the length field read from th
 
 ---
 
-## 5. Architecture Modernization
+## 5. Platform Portability Bottlenecks
 
-### 5.1 Entity Component System (ECS)
+> These issues were directly encountered during the Linux and WebAssembly (Emscripten) porting work. Each caused real build failures, silent runtime regressions, or required invasive workarounds that compromise maintainability.
+
+---
+
+### 5.1 🔴 `anGenBuffers` Divergence — Silent VBO Failure on WebGL
+
+**Files:** [handheld/src/client/renderer/gles.cpp](handheld/src/client/renderer/gles.cpp), [handheld/src/client/renderer/gl.cpp](handheld/src/client/renderer/gl.cpp)
+
+The two GL backend files had divergent implementations of `anGenBuffers`:
+
+```cpp
+// gles.cpp — fake stub: returns sequential integers, never calls glGenBuffers
+void anGenBuffers(GLsizei n, GLuint* buffers) {
+    static GLuint k = 1;
+    for (int i = 0; i < n; ++i)
+        buffers[i] = ++k;   // NOT real GPU buffer objects
+}
+
+// gl.cpp — correct implementation
+void anGenBuffers(GLsizei n, GLuint* buffers) {
+    glGenBuffers(n, buffers);
+}
+```
+
+The fake stub worked on Android/GLES drivers because many lenient GLES implementations accept `glBindBuffer` with arbitrary integer IDs. WebGL (strict OpenGL ES 2.0) silently ignores `glBindBuffer` calls with IDs that were not allocated by `glGenBuffers`. The result was that all chunk VBOs were bound to nothing, `glBufferData` uploaded to a null target, and every call to `glVertexPointer` read from WASM address 0 — producing untextured (solid-colour) terrain while UI textures still worked (the UI path used `Tesselator::init()` which called `glGenBuffers` directly).
+
+**This was the root cause of the full terrain texture regression on WASM.**
+
+**Fix applied:** `gles.cpp` now calls `glGenBuffers` like `gl.cpp`. The deeper structural issue is that the same function exists in two files with two different behaviours.
+
+**Proposed long-term fix:** Consolidate into a single `GlBackend.cpp` selected at compile time, or expose `anGenBuffers` only from one shared translation unit:
+
+```cpp
+// gl_backend.cpp — compiled for all targets
+void GlBackend::GenBuffers(GLsizei n, GLuint* buffers) {
+    glGenBuffers(n, buffers);
+}
+```
+
+---
+
+### 5.2 🔴 `OPENGL_GLES` vs `OPENGL_ES` — Inconsistent Macro Split
+
+**Files:** [handheld/src/client/renderer/gles.h](handheld/src/client/renderer/gles.h), [handheld/src/client/renderer/Tesselator.cpp](handheld/src/client/renderer/Tesselator.cpp)
+
+Two distinct macros guard GL paths with no documented relationship:
+
+```cpp
+// gles.h — define set at file inclusion time
+#if defined(ANDROID) || defined(__APPLE__) || defined(RPI) || defined(__EMSCRIPTEN__)
+    #define OPENGL_ES      // <— set here, used for include paths
+
+// Tesselator.cpp — uses a *different* macro for the same concept
+#ifdef OPENGL_GLES          // <— never actually defined for WASM
+    glGenBuffers2(vboCounts, vboIds);   // via anGenBuffers (fake stub)
+#else
+    glGenBuffers(vboCounts, vboIds);    // direct call (correct)
+#endif
+```
+
+For the WASM build, `OPENGL_ES` is defined but `OPENGL_GLES` is not. So `Tesselator::init()` takes the `#else` branch and calls real `glGenBuffers` directly — which works. Meanwhile `glGenBuffers2` (aliased to `anGenBuffers`) was the broken fake stub. This accident of two macros partially masked the `anGenBuffers` bug: the Tesselator's own buffers worked fine while chunk buffers (which went through `glGenBuffers2`) were broken.
+
+**Fix:** Unify to a single macro — e.g., `OPENGL_ES` — and use it consistently everywhere. Remove `OPENGL_GLES` entirely or add a static_assert that only one of the two can be defined.
+
+```cpp
+// Proposed: one macro, one truth
+#if defined(ANDROID) || defined(__APPLE__) || defined(RPI) || defined(__EMSCRIPTEN__)
+    #define USE_OPENGL_ES 1
+#endif
+
+// Tesselator.cpp
+#if USE_OPENGL_ES
+    glGenBuffers2(vboCounts, vboIds);
+#else
+    glGenBuffers(vboCounts, vboIds);
+#endif
+```
+
+---
+
+### 5.3 🔴 Duplicated GL Backend Code — `gl.cpp` vs `gles.cpp`
+
+**Files:** [handheld/src/client/renderer/gl.cpp](handheld/src/client/renderer/gl.cpp), [handheld/src/client/renderer/gles.cpp](handheld/src/client/renderer/gles.cpp)
+
+`drawArrayVT`, `drawArrayVTC`, `drawArrayVTC_NoState`, `anGenBuffers`, `gluPerspective`, and `glhUnProjectf` are all defined **twice** — once in each file — with slightly different implementations. Changes to one file are not propagated to the other, which is how the `anGenBuffers` divergence survived.
+
+Both files are included in every build via the platform-selected CMake source list, meaning any fix must be applied symmetrically or a shared file introduced.
+
+**Fix:** Extract into a single `gl_common.cpp` included by both builds, or use a single file guarded by platform:
+
+```
+handheld/src/client/renderer/
+├── gl_common.cpp        # anGenBuffers, drawArrayVT*, gluPerspective, unproject
+├── gl.cpp               # Desktop-only: glewInit, glPolygonMode etc.
+└── gles.cpp             # GLES-only: glOrthof etc.
+```
+
+---
+
+### 5.4 🟡 `App.h` — Platform-Specific Buffer Swap Leaks Across All Targets
+
+**File:** [handheld/src/App.h](handheld/src/App.h)
+
+```cpp
+void swapBuffers() {
+#ifndef NO_EGL
+    if (_context.doRender) {
+#ifdef OPENGL_GLES
+        eglSwapBuffers(_context.display, _context.surface);
+#else
+        // For desktop OpenGL, use SwapBuffers with HDC
+        SwapBuffers((HDC)_context.display);   // Windows-only Win32 API
+#endif
+    }
+#endif
+}
+```
+
+The `#else` branch calls `SwapBuffers((HDC)_context.display)` — a Win32-only function. On every non-Windows, non-EGL platform (Linux with SDL, WASM with SDL), this compiled and linked because `NO_EGL` wasn't defined, causing a build failure: `SwapBuffers` is not declared on Linux or WASM.
+
+The workaround was to add `NO_EGL` to the compile definitions of the Linux and WASM targets. This is the wrong layer: the `App.h` header should not require callers to suppress broken code via defines.
+
+**Fix:** Delegate buffer swapping entirely to `AppPlatform`, removing `swapBuffers()` from `App`:
+
+```cpp
+// AppPlatform interface
+class AppPlatform {
+ public:
+  virtual void SwapBuffers() = 0;   // each platform implements
+};
+
+// AppPlatform_linux.cpp
+void AppPlatform_Linux::SwapBuffers() { SDL_GL_SwapWindow(window_); }
+
+// AppPlatform_wasm.cpp
+void AppPlatform_wasm::SwapBuffers() { SDL_GL_SwapWindow(window_); }
+
+// AppPlatform_win32.cpp
+void AppPlatform_Win32::SwapBuffers() { ::SwapBuffers(hdc_); }
+
+// AppPlatform_android.cpp
+void AppPlatform_Android::SwapBuffers() { eglSwapBuffers(display_, surface_); }
+```
+
+`App::swapBuffers()` then becomes `platform()->SwapBuffers()` with no `#ifdef` chains.
+
+---
+
+### 5.5 🟡 `CThread` — No Single-Threaded Fallback Path
+
+**File:** [handheld/src/platform/CThread.h](handheld/src/platform/CThread.h)
+
+`CThread` wraps `pthread` directly. On WASM without `-sPTHREADS`, `pthread_create` links but fails at runtime (SharedArrayBuffer is unavailable without specific HTTP headers on most servers). The result was that `Minecraft::setLevel()` spawned a level-generation thread that immediately died silently, leaving `isGeneratingLevel` permanently `true` and the screen stuck on "Locating server".
+
+The fix applied was to add `__EMSCRIPTEN__` to the `#if defined(STANDALONE_SERVER)` guard that selects synchronous level generation. This is a correct fix but requires every future single-threaded platform to be enumerated in the same conditional.
+
+**Proposed fix:** Abstract thread creation behind a capability query:
+
+```cpp
+// Platform capability
+class AppPlatform {
+ public:
+  virtual bool SupportsBackgroundThreads() const { return true; }
+};
+
+// AppPlatform_wasm.cpp
+bool AppPlatform_wasm::SupportsBackgroundThreads() const { return false; }
+
+// Minecraft::setLevel()
+const bool threaded_level_creation =
+    platform()->SupportsBackgroundThreads();
+if (threaded_level_creation) {
+    is_generating_level_ = true;
+    generate_level_thread_ = new CThread(Minecraft::PrepareLevel_tspawn, this);
+} else {
+    GenerateLevel("", level);
+}
+```
+
+This replaces a proliferating list of `#ifdef` platform guards with a runtime-queried capability.
+
+---
+
+### 5.6 🟡 RakNet Third-Party Patches — Fragile Out-of-Tree Modifications
+
+**Files:** `handheld/project/lib_projects/raknet/jni/RaknetSources/FileList.cpp`, `PacketLogger.cpp`
+
+Two files in the vendored RakNet source required direct patches to compile on WASM:
+
+1. **`FileList.cpp`** — included `<sys/io.h>` (x86 port I/O) without excluding Emscripten:
+   ```cpp
+   // Required adding: && !defined(__EMSCRIPTEN__)
+   #elif !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__EMSCRIPTEN__)
+       #include <sys/io.h>
+   ```
+
+2. **`PacketLogger.cpp`** — used C++11 user-defined string literals in C++03 mode, rejected by Emscripten's stricter clang. Required passing `-std=gnu++98` as a per-target compile option in CMake.
+
+Every upstream RakNet update would clobber these patches. The better approach is a CMake patch step or a proper Emscripten compatibility layer upstream.
+
+**Proposed fix:**
+- Maintain patches as a `patches/` directory and apply with `git apply` in the CMake configure step
+- Or, fork the vendored copy into `handheld/project/lib_projects/raknet_patched/` with clear change markers
+- Long-term: replace RakNet with a modern networking library (ENet, yojimbo, or Steam Networking Sockets)
+
+---
+
+### 5.7 🟡 CMake Port Flag Syntax — Emscripten `-s` Flags Don't Survive `target_link_options`
+
+**File:** [handheld/project/wasm/CMakeLists.txt](handheld/project/wasm/CMakeLists.txt)
+
+The initial WASM CMakeLists used `-s USE_SDL=2` as a quoted string in `target_compile_options` and `target_link_options`. CMake passes this as a single token to the compiler, which rejects it:
+
+```
+clang++: error: unknown argument: '-s USE_SDL=2'
+```
+
+cmake's `target_link_options` requires either separate tokens or the `SHELL:` prefix to prevent re-splitting. Additionally, the modern Emscripten port system uses `--use-port=sdl2`, not `-s USE_SDL=2` (the latter is deprecated).
+
+This mistake is easy to repeat because Emscripten's own documentation still prominently shows `-s` syntax.
+
+**Fix applied:** Use `SHELL:--use-port=` prefix. This should be documented clearly at the top of `wasm/CMakeLists.txt`.
+
+**Proposed addition** — a CMake helper macro to avoid future mistakes:
+
+```cmake
+# Helper: add Emscripten port cleanly
+macro(em_use_port target port)
+    target_compile_options(${target} PRIVATE "SHELL:--use-port=${port}")
+    target_link_options(${target} PRIVATE "SHELL:--use-port=${port}")
+endmacro()
+
+em_use_port(minecraft-pe sdl2)
+em_use_port(minecraft-pe libpng)
+em_use_port(minecraft-pe zlib)
+```
+
+---
+
+### 5.8 🟡 `AppPlatform` Interface — All-or-Nothing Virtual Base
+
+**File:** [handheld/src/AppPlatform.h](handheld/src/AppPlatform.h)
+
+Every new platform (Linux, WASM) requires implementing the full `AppPlatform` interface, which spans storage, audio, input, display, license validation, clipboard, and locale. Most of these are irrelevant for desktop/WASM targets. Creating `AppPlatform_linux.cpp` and `AppPlatform_wasm.cpp` required stubbing out 15–20 pure or semi-pure virtual methods with empty bodies just to link.
+
+This interface violates the Interface Segregation Principle and creates a stub explosion as platforms multiply.
+
+**Proposed fix:** Split into focused interfaces:
+
+```cpp
+class StoragePlatform {
+ public:
+  virtual std::string GetStoragePath() const = 0;
+  virtual bool FileExists(std::string_view path) const = 0;
+};
+
+class DisplayPlatform {
+ public:
+  virtual void SwapBuffers() = 0;
+  virtual std::pair<int,int> GetWindowSize() const = 0;
+};
+
+class AudioPlatform {
+ public:
+  virtual void PlaySound(std::string_view name, float volume) = 0;
+};
+
+// AppPlatform aggregates them (backward compatible)
+class AppPlatform : public StoragePlatform,
+                    public DisplayPlatform,
+                    public AudioPlatform {
+ // ...
+};
+```
+
+New platforms that only need rendering (e.g., headless server, WASM) can implement only `DisplayPlatform` and `StoragePlatform`, with no-op `AudioPlatform`.
+
+---
+
+### 5.9 🟢 `GL_QUADS` Emulation Dependency — Latent GLES2 Breakage
+
+**Files:** [handheld/src/client/renderer/Tesselator.cpp](handheld/src/client/renderer/Tesselator.cpp), [handheld/src/client/renderer/gles.h](handheld/src/client/renderer/gles.h)
+
+`GL_QUADS` (value `0x0007`) is defined in `gles.h` as a constant for GLES targets. The `Tesselator::vertex()` method manually converts quads to triangles inline by duplicating vertices on every 4th call. The WASM build passes `-sLEGACY_GL_EMULATION=1` to Emscripten for other reasons (matrix stack, `glColor4f`), but the quad conversion is already done in C++ before OpenGL ever sees `GL_TRIANGLES`.
+
+This is correct but fragile: the `0x0007` numeric constant could collide with a real GLES2 enum on some implementations, and the conversion logic is buried in `vertex()` with no comment.
+
+Additionally, `LEGACY_GL_EMULATION` enables the full fixed-function pipeline emulation layer, which has significant code-size and performance costs. If the quad conversion is already handled in `Tesselator`, `LEGACY_GL_EMULATION` is only needed for the matrix stack (`glPushMatrix`/`glPopMatrix`/`glTranslatef`) and `glColor4f`. These should be replaced with proper GLSL uniforms, allowing `LEGACY_GL_EMULATION` to be removed and reducing WASM binary size.
+
+---
+
+### 5.10 🟢 Data Path Discovery — Hardcoded Relative Paths in Build Files
+
+**File:** [handheld/project/wasm/CMakeLists.txt](handheld/project/wasm/CMakeLists.txt)
+
+The WASM CMakeLists originally used `CMAKE_SOURCE_DIR` (the top-level CMake source root) to locate the game data directory. Because the WASM CMakeLists is a sub-project, `CMAKE_SOURCE_DIR` resolved to the workspace root rather than `handheld/data/`, causing the `--preload-file` linker flag to point at the wrong path. The embedded WASM filesystem was empty and the game could not load any textures.
+
+**Fix applied:** Use `CMAKE_CURRENT_SOURCE_DIR/../../data`.
+
+**Proposed improvement:** Expose the data path as a CMake cache variable with a computed default:
+
+```cmake
+set(MCPE_DATA_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../data"
+    CACHE PATH "Path to the handheld/data/ directory")
+
+if(NOT IS_DIRECTORY "${MCPE_DATA_DIR}")
+    message(FATAL_ERROR "MCPE_DATA_DIR not found: ${MCPE_DATA_DIR}")
+endif()
+```
+
+This makes the path overridable from the command line and surfaces misconfiguration at configure-time rather than as a silent runtime "texture not found" failure.
+
+---
+
+## 6. Architecture Modernization
+
+### 6.1 Entity Component System (ECS)
 
 The current 5-deep inheritance hierarchy (`Entity → Mob → PathfinderMob → Animal → Cow`) creates vtable overhead and rigid coupling.
 
@@ -487,7 +804,7 @@ cow.Add<AIComponent>(
     std::make_unique<PanicGoal>());
 ```
 
-### 5.2 Renderer Modernisation
+### 6.2 Renderer Modernisation
 
 The `Tesselator` is an immediate-mode builder with a global singleton (`Tesselator::instance`). Modern rendering uses typed command queues.
 
@@ -509,7 +826,7 @@ class RenderBatch {
 };
 ```
 
-### 5.3 Network Packet Dispatch → `std::variant`
+### 6.3 Network Packet Dispatch → `std::variant`
 
 The current packet system uses 55+ virtual `handle()` overloads on `NetEventCallback`. Modern approach:
 
@@ -525,7 +842,7 @@ void HandlePacket(const RakNet::RakNetGUID& source,
 }
 ```
 
-### 5.4 Error Handling → `std::expected` (C++23)
+### 6.4 Error Handling → `std::expected` (C++23)
 
 ```cpp
 // CURRENT: NULL return, no error information
@@ -548,9 +865,9 @@ CreateEntity(EntityType id, Level& level) {
 
 ---
 
-## 6. Performance Observations
+## 7. Performance Observations
 
-### 6.1 `Level::getCubes()` — Non-Thread-Safe Reused Buffer
+### 7.1 `Level::getCubes()` — Non-Thread-Safe Reused Buffer
 
 ```cpp
 // Level.h
@@ -560,55 +877,70 @@ std::vector<AABB>& getCubes(const Entity* source, const AABB& box);
 
 Returns reference to a member vector — second call invalidates first. Not thread-safe. Consider returning by value (RVO will eliminate the copy) or use a thread_local buffer.
 
-### 6.2 Entity Lookup via `std::map<int, Entity*>`
+### 7.2 Entity Lookup via `std::map<int, Entity*>`
 
 `EntityMap entityIdLookup` is `std::map<int,Entity*>` — O(log n) per lookup. Replace with `std::unordered_map<int, Entity*>` for O(1) average.
 
-### 6.3 `DataLayer` — Nibble-Packed Light Storage Hot Path
+### 7.3 `DataLayer` — Nibble-Packed Light Storage Hot Path
 
 The nibble-packed `DataLayer` (used for block and sky light) uses branching per-access to extract 4-bit values. This is a hot path for lighting calculations. SIMD batch-processing of light values would provide significant speedup on modern CPUs.
 
-### 6.4 `RandomLevelSource` — Multiple Perlin Noise Objects on Stack
+### 7.4 `RandomLevelSource` — Multiple Perlin Noise Objects on Stack
 
 `perlinNoise1`, `perlinNoise2`, `perlinNoise3`, `lperlinNoise1`, `lperlinNoise2`, `scaleNoise`, `depthNoise`, `forestNoise` — 8 independent noise generators, each potentially holding large state arrays on the heap. Consolidating into a single parameterised noise function or using a single seeded noise table would reduce cache misses.
 
 ---
 
-## 7. Migration Priority Matrix
+## 8. Migration Priority Matrix
 
 | # | Issue | Files Affected | Effort | Impact | Priority |
 |---|---|---|---|---|---|
 | 1 | Smart pointers throughout | All | Very High | Critical safety | **P0** |
 | 2 | `volatile` → `std::atomic` | `Minecraft.h` | Low | Race condition fix | **P0** |
 | 3 | Remove custom `Ref<T>` | `MemUtils.h` | Low | Memory leak fix | **P0** |
-| 4 | `NULL` → `nullptr` | ~100 files | Medium | Type safety | **P1** |
-| 5 | `override`/`final` on virtuals | All entity/tile/net | Medium | Bug prevention | **P1** |
-| 6 | C-style casts → C++ casts | ~50 files | Medium | Type safety | **P1** |
-| 7 | `explicit` constructors | ~30 classes | Low | Prevent conversions | **P1** |
-| 8 | Fix GL includes for Linux | `gles.h`, `gl.h` | Low | Linux portability | **P1** |
-| 9 | `enum class` for all enums | ~15 enums | Medium | Scope safety | **P2** |
-| 10 | `constexpr` for constants | `SharedConstants.h`, `Tile.h` | Low | Compile-time eval | **P2** |
-| 11 | `std::array` for static arrays | `Tile.h`, `DataLayer.h` | Low | Bounds safety | **P2** |
-| 12 | `std::unordered_map` for `IntHashMap` | `IntHashMap.h` | Low | Performance | **P2** |
-| 13 | NBT RAII (`unique_ptr` children) | `nbt/*.h` | Medium | Memory safety | **P2** |
-| 14 | God class decomposition | `Level`, `Minecraft`, `Entity` | Very High | Maintainability | **P3** |
-| 15 | ECS architecture | Entity hierarchy | Very High | Extensibility | **P3** |
-| 16 | Modern renderer | `Tesselator`, GL | Very High | Performance | **P3** |
-| 17 | Naming convention migration | All new code | Ongoing | Consistency | **P3** |
+| 4 | Unify `anGenBuffers` / consolidate `gl.cpp`+`gles.cpp` | `gl.cpp`, `gles.cpp` | Low | Portability, correctness | **P0** |
+| 5 | `NULL` → `nullptr` | ~100 files | Medium | Type safety | **P1** |
+| 6 | `override`/`final` on virtuals | All entity/tile/net | Medium | Bug prevention | **P1** |
+| 7 | C-style casts → C++ casts | ~50 files | Medium | Type safety | **P1** |
+| 8 | `explicit` constructors | ~30 classes | Low | Prevent conversions | **P1** |
+| 9 | Fix GL includes for Linux | `gles.h`, `gl.h` | Low | Linux portability | **P1** |
+| 10 | Unify `OPENGL_GLES` / `OPENGL_ES` macros | `gles.h`, `gl.h`, `Tesselator.cpp` | Low | Portability | **P1** |
+| 11 | Delegate `swapBuffers` to `AppPlatform` | `App.h`, all `AppPlatform_*.cpp` | Low | Cross-platform correctness | **P1** |
+| 12 | `CThread` → platform capability query | `CThread.h`, `Minecraft.cpp` | Medium | WASM / single-thread support | **P1** |
+| 13 | `enum class` for all enums | ~15 enums | Medium | Scope safety | **P2** |
+| 14 | `constexpr` for constants | `SharedConstants.h`, `Tile.h` | Low | Compile-time eval | **P2** |
+| 15 | `std::array` for static arrays | `Tile.h`, `DataLayer.h` | Low | Bounds safety | **P2** |
+| 16 | `std::unordered_map` for `IntHashMap` | `IntHashMap.h` | Low | Performance | **P2** |
+| 17 | NBT RAII (`unique_ptr` children) | `nbt/*.h` | Medium | Memory safety | **P2** |
+| 18 | RakNet patches → patch-managed vendored copy | `lib_projects/raknet/` | Medium | Upgrade safety | **P2** |
+| 19 | CMake `em_use_port` helper macro | `wasm/CMakeLists.txt` | Low | Build correctness | **P2** |
+| 20 | `MCPE_DATA_DIR` cache variable w/ validation | `wasm/CMakeLists.txt` | Low | Configure-time safety | **P2** |
+| 21 | Split `AppPlatform` interface (ISP) | `AppPlatform.h` | High | Platform scalability | **P2** |
+| 22 | Remove `LEGACY_GL_EMULATION` (replace matrix stack) | `wasm/CMakeLists.txt`, shaders | Very High | WASM binary size / perf | **P3** |
+| 23 | God class decomposition | `Level`, `Minecraft`, `Entity` | Very High | Maintainability | **P3** |
+| 24 | ECS architecture | Entity hierarchy | Very High | Extensibility | **P3** |
+| 25 | Modern renderer | `Tesselator`, GL | Very High | Performance | **P3** |
+| 26 | Naming convention migration | All new code | Ongoing | Consistency | **P3** |
 
 ### Recommended First Modernisation Pass (Lowest Risk, Highest Impact)
 
 These changes are mechanical, testable, and do not alter game logic:
 
-1. **Add `override` to all virtual overrides** — purely additive, catches bugs at compile time
-2. **Replace `NULL` with `nullptr`** — mechanical substitution, no behaviour change
-3. **Replace `volatile` with `std::atomic`** — fixes real race conditions
-4. **Add `explicit` to single-argument constructors** — prevents accidental conversions
-5. **Replace `__inline` with `inline`** — standards compliance
-6. **Replace `Ref<T>` with `std::shared_ptr<T>`** — fixes the commented-out destructor leak
-7. **Replace `IntHashMap` with `std::unordered_map`** — drop-in replacement
-8. **Fix GL include paths for Linux** — required for cross-platform build
+1. **Unify `anGenBuffers` / merge `gl.cpp` + `gles.cpp` shared code** — eliminates most-painful portability bug class
+2. **Unify `OPENGL_GLES` / `OPENGL_ES` into one macro** — removes ambiguity in GL backend selection
+3. **Delegate `swapBuffers` to `AppPlatform`** — eliminates Win32-specific `SwapBuffers(HDC)` leak in `App.h`
+4. **Add `override` to all virtual overrides** — purely additive, catches signature mismatches at compile time
+5. **Replace `NULL` with `nullptr`** — mechanical substitution, no behaviour change
+6. **Replace `volatile` with `std::atomic`** — fixes real race conditions in multi-threaded level generation
+7. **Add `explicit` to single-argument constructors** — prevents accidental implicit conversions
+8. **Replace `__inline` with `inline`** — standards compliance, MSVC extension removed
+9. **Replace `Ref<T>` with `std::shared_ptr<T>`** — fixes the commented-out destructor memory leak
+10. **Replace `IntHashMap` with `std::unordered_map`** — drop-in with O(1) lookups
+11. **Fix GL include paths for Linux** — required for cross-platform builds
+12. **Add `MCPE_DATA_DIR` CMake cache variable with configure-time validation** — surfaces path errors at configure time, not at runtime
 
 ---
 
-*Generated by full codebase audit — see [REWRITE_PLAN.md](REWRITE_PLAN.md) for phased migration strategy.*
+*Last Updated: 2026-03-05 — Section 5 (Platform Portability Bottlenecks) added based on Linux and WASM porting experience*  
+*Target: Minecraft PE Alpha 0.6.1*  
+*Standard: Google C++ Style Guide*
